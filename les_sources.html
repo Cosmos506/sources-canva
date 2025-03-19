@@ -47,12 +47,30 @@
             width: 100%;
             bottom: 0;
         }
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px;
+        }
         @media (max-width: 600px) {
             nav {
                 flex-direction: column;
+                display: none;
             }
             nav a {
                 padding: 0.5rem;
+            }
+            .menu-icon {
+                display: flex;
+            }
+            nav.active {
+                display: flex;
             }
         }
     </style>
@@ -61,7 +79,12 @@
     <header>
         <h1>Bienvenue sur Notre Site Écologique</h1>
     </header>
-    <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="nav">
         <a href="#accueil">Accueil</a>
         <a href="#apropos">À Propos</a>
         <a href="#actions">Nos Actions</a>
@@ -89,14 +112,10 @@
         <p>&copy; 2023 Site Écologique. Tous droits réservés.</p>
     </footer>
     <script>
-        // Exemple de JavaScript pour ajouter une interaction
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.addEventListener('click', function() {
-                    alert('Vous avez cliqué sur la section : ' + this.id);
-                });
-            });
-        });
+        function toggleMenu() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
     </script>
 </body>
+</html>

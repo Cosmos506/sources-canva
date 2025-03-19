@@ -18,33 +18,29 @@
             color: #fff;
             padding: 1rem 0;
             text-align: center;
-            z-index: 1000; /* Assurer que l'entête est toujours au-dessus du contenu */
-            position: relative; /* Pour éviter qu'il soit couvert par le menu */
         }
         nav {
             display: flex;
             justify-content: center;
             background-color: #4f773f;
-            position: fixed; /* Le menu est maintenant fixe en haut */
+            position: absolute; /* Ajouté pour garantir qu'il soit en haut */
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 999; /* Assure que le menu est visible au-dessus du reste du contenu */
+            z-index: 999; /* Assure qu'il soit au-dessus des autres éléments */
             flex-direction: row;
-            padding: 1rem 0;
         }
         nav a {
             color: #fff;
             padding: 1rem;
             text-decoration: none;
-            text-align: center; /* Centrer les liens */
         }
         nav a:hover {
             background-color: #3f673f;
         }
         main {
             padding: 2rem;
-            margin-top: 6rem; /* Augmenter la marge supérieure pour éviter que le contenu soit caché sous le menu */
+            margin-top: 4rem; /* Ajouté pour décaler le contenu sous le menu */
         }
         section {
             margin-bottom: 2rem;
@@ -62,7 +58,7 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            position: fixed;
+            position: fixed; /* Position fixe pour le bouton menu */
             top: 1rem;
             left: 1rem;
             z-index: 1000; /* Assure qu'il soit visible au-dessus du menu */
@@ -77,17 +73,18 @@
             nav {
                 flex-direction: column;
                 display: none;
-                width: 100%;
-                position: absolute; /* Positionner le menu en haut de la page quand activé */
+                width: 100%; /* Assure que le menu prenne toute la largeur */
+                position: absolute; /* Position absolue pour garantir qu'il s'affiche correctement */
                 top: 0;
                 left: 0;
-                background-color: #4f773f;
+                background-color: #4f773f; /* Même couleur que dans la version normale */
             }
             nav.active {
                 display: flex;
             }
             nav a {
                 padding: 1rem;
+                text-align: center; /* Centrage des éléments dans le menu */
             }
             .menu-icon {
                 display: flex;

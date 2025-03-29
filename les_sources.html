@@ -57,7 +57,6 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            position: fixed; /* Position fixe pour le bouton menu */
             top: 1rem;
             left: 1rem;
             z-index: 1000; /* Assure qu'il soit visible au-dessus du menu */
@@ -67,6 +66,9 @@
             height: 3px;
             background-color: #fff;
             margin: 4px;
+        }
+        .partie2 {
+            margin-bottom: 70px;
         }
         @media (max-width: 600px) {
             nav {
@@ -88,40 +90,80 @@
             .menu-icon {
                 display: flex;
             }
+
+        }
+        @media (max-width: 500px) {
+            .partie2 {
+                margin-bottom: 100px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <h1>Bienvenue sur Notre Site Écologique</h1>
     </header>
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
     <nav id="nav">
         <a href="#explication">Explication</a>
         <a href="#partie1">Partie 1</a>
         <a href="#partie2">Partie 2</a>
-        <a href="#contact">Contact</a>
     </nav>
     <main>
         <section id="explication">
             <h2>Explication</h2>
-            <p>Découvrez notre engagement pour un avenir plus vert.</p>
+            <p>
+                Vous retrouverez ici toutes nos sources utilisées et classées 
+                pour notre présentation.
+            </p>
         </section>
         <section id="partie1">
             <h2>Partie 1</h2>
-            <p>Nous sommes une organisation dédiée à la protection de l'environnement.</p>
+            <h3>Diapositive 1</h3>
+            <ul>
+                <li><a href="https://www.statistiques.developpement-durable.gouv.fr/matieres-mobilisees-par-leconomie-francaisehttps://fr.statista.com/marches/1150/biens-de-consommation/">statistiques.developpement.durable.gouv.fr</a></li>
+                <li><a href="https://fr.wikipedia.org/wiki/Bien_de_consommation">Wikipédia | Bien de consommation</a></li>
+                <li><a href="https://fr.statista.com/marches/1150/biens-de-consommation/">Statista | Bien de consommation</a></li>
+                <li><a href="https://naturefrance.fr/surexploitation-des-ressources">Nature France | Surexploitation des ressources</a></li>
+                <li><a href="https://ekodev.com/actualites/surexploitation-ressources-naturelles/">Ekodev | surexploitation des ressources naturelles</a></li>
+            </ul>
+            <h3>Diapositive 2</h3>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <h3>Diapositive 3</h3>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
         </section>
-        <section id="partie2">
+        <section id="partie2" class="partie2">
             <h2>Partie 2</h2>
-            <p>Participez à nos initiatives pour un monde plus durable.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Contactez-nous pour plus d'informations ou pour rejoindre notre cause.</p>
+            <h3>Diapositive 1</h3>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <h3>Diapositive 2</h3>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+            <h3>Diapositive 3</h3>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
         </section>
     </main>
     <footer>
